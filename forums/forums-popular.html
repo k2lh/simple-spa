@@ -1,0 +1,73 @@
+<div ng-include src="'forums/forums-header.html'"></div>
+<div ng-include src="'forums/forums-search-large.html'"></div>
+
+<div class="content-area forum-sections">
+     <div class="container-fluid ">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Talk to us</h3>
+            </div>
+        </div>
+        <div class="row link-list">
+            <div class="col-md-4 color-talk-text">
+                <span class="icon icon-lightbulb-o"></span>
+                <h4><a href="#forums-product">Idea exchange</a></h4>
+            </div>
+            <div class="col-md-4 color-talk-text">
+                <span class="icon icon-toolset"></span>
+                <h4><a href="#forums-product">Tips & Tricks</a></h4>
+            </div>
+            <div class="col-md-4 color-talk-text">
+                <span class="icon icon-bullhorn"></span>
+                <h4><a href="#forums-product">Suggest a feature</a></h4>
+            </div>
+        </div>
+        <div class="row link-list">
+            <div class="col-md-4 color-talk-text">
+                <span class="icon icon-coffee"></span>
+                <h4><a href="#forums-product">Everything else</a></h4>
+            </div>
+            <div class="col-md-4 color-talk-text">
+                <span class="icon icon-intros"></span>
+                <h4><a href="#forums-product">Introduce yourself</a></h4>
+            </div>
+            <div class="col-md-4 color-talk-text">
+                <span class="icon icon-bug"></span>
+                <h4><a href="#forums-product">Bugs & troubleshooting</a></h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-area-midline">
+    <div class="row">
+        <div class="col-md-12">
+        <h3 class="midline"><span>Need help? <a href="#">Register</a> to ask a question, or <a href="#">log in</a> to join the discussion.</span></h3>
+        </div>
+    </div>
+</div>
+
+
+<div class="content-area">
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Most Recent Active Topics</h3>
+                <div class="list-forums">
+                    <div class="row" ng-repeat="i in items">
+                        <div class="col-md-8">
+                            <span class="icon icon-{{i.icon}}"></span>
+                            <a href="#forums-content">{{i.title}} </a>
+                        </div>
+                        <div class="col-md-4">
+                            <span class="icon icon-tag"></span><a href="#forum-single"> {{i.link}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div ng-include src="'forums/forums-footer.html'"></div>
+

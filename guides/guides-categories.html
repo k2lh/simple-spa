@@ -1,0 +1,33 @@
+<div ng-controller="categoriesController" class="sidebar-group">
+    <h4>Categories</h4>
+        <ul class="sidebar">
+            <li><a href="#guides-general">General</a></li>
+            <li collapse="isCollapsed"><a href="#guides-product">Customer Reports</a></li>
+            <li collapse="isCollapsed"><a href="#guides-product">Integration Manager</a></li>
+            <li collapse="isCollapsed"><a href="#guides-product">ABC Product A</a></li>
+            <li collapse="isCollapsed"><a href="#guides-product">ABC  and Ariba</a></li>
+            <li collapse="isCollapsed"><a href="#guides-product">ABC  Data Exchange</a></li>
+            <li><a href="#guides-product">ABC Main</a></li>
+            <li><a href="#guides-product">ABC Pro</a></li>
+            <li><a href="#guides-product">ABC Management</a></li>
+            <li><a href="#guides-product">ABC Enterprise</a></li>
+            <li collapse="isCollapsed"><a href="#guides-product">Enterprise Solution</a></li>
+            <li><a href="#guides-product">XYZ</a></li>
+            <li collapse="isCollapsed"><a href="#guides-product">Market Insight</a></li>
+            <li collapse="isCollapsed"><a href="#guides-product">SPQR</a></li>
+            <li collapse="isCollapsed"><a href="#guides-product">Mobile</a></li>
+            <li collapse="isCollapsed"><a href="#guides-product">MyABC.com</a></li>
+            <li><a href="#guides-product">Analysis Tool</a></li>
+            <li collapse="isCollapsed"><a href="#guides-product">Other Solutions</a></li>
+            <li collapse="isCollapsed"><a href="#guides-product">Data Services</a></li>
+            <li><a href="#guides-product">Supplier Manager</a></li>
+            <li collapse="isCollapsed"><a href="#guides-product">Diversity Service</a></li>
+            <li><a href="#guides-product">App Tools</a></li>
+    </ul>
+    <div ng-click="isCollapsed = !isCollapsed">
+                <span ng-show="isCollapsed">... show more</span>
+                <span ng-show="!isCollapsed">... show less</span>
+    </div>
+
+</div>
+

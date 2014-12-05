@@ -1,0 +1,33 @@
+<div ng-controller="categoriesController"  class="sidebar-group">
+    <h4>Categories</h4>
+        <ul class="sidebar">
+            <li><a href="#questions-general">General</a></li>
+            <li collapse="isCollapsed"><a href="#questions-product">Customer Reports</a></li>
+            <li collapse="isCollapsed"><a href="#questions-product">Integration Manager</a></li>
+            <li collapse="isCollapsed"><a href="#questions-product">ABC Product A</a></li>
+            <li collapse="isCollapsed"><a href="#questions-product">ABC  and XYZ</a></li>
+            <li collapse="isCollapsed"><a href="#questions-product">ABC  Data Exchange</a></li>
+            <li><a href="#questions-product">ABC Main</a></li>
+            <li><a href="#questions-product">ABC Pro</a></li>
+            <li><a href="#questions-product">ABC Management</a></li>
+            <li><a href="#questions-product">ABC Enterprise</a></li>
+            <li collapse="isCollapsed"><a href="#questions-product">Enterprise Solution</a></li>
+            <li><a href="#questions-product">XYZ</a></li>
+            <li collapse="isCollapsed"><a href="#questions-product">Market Insight</a></li>
+            <li collapse="isCollapsed"><a href="#questions-product">SPQR</a></li>
+            <li collapse="isCollapsed"><a href="#questions-product">Mobile</a></li>
+            <li collapse="isCollapsed"><a href="#questions-product">MyABC.com</a></li>
+            <li><a href="#questions-product">Analysis Tool</a></li>
+            <li collapse="isCollapsed"><a href="#questions-product">Other Solutions</a></li>
+            <li collapse="isCollapsed"><a href="#questions-product">Data Services</a></li>
+            <li><a href="#questions-product">Supplier Manager</a></li>
+            <li collapse="isCollapsed"><a href="#questions-product">Diversity Service</a></li>
+            <li><a href="#questions-product">App Tools</a></li>
+    </ul>
+    <div ng-click="isCollapsed = !isCollapsed">
+                <span ng-show="isCollapsed">... show more</span>
+                <span ng-show="!isCollapsed">... show less</span>
+    </div>
+
+</div>
+

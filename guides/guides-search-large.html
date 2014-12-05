@@ -1,0 +1,54 @@
+<div class="search-area bigbox" ng-controller="searchController">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="color-guide-text">
+                    How can we help?
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <form class="form-inline" role="form">
+                    <div class="form-group fullwidth">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="enter keyword or phrase" ng-model="search" >
+                            <div class="input-group-addon">
+                                <div ng-show="!showResults" ><span class="icon upsize icon-search color-guide-text" ></span></div>
+                                <div ng-show="showResults"  ng-click="clearResults()"><span class="icon upsize icon-search-close color-guide-text" ></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" ng-show="showResults">
+            <div class="boxed-search">
+                <div class="search-header-bar">
+                    <form class="form-inline" role="form">
+                        <div class="form-group">
+                            <label for="category">Find answers about</label>
+                            <div class="input-group">
+                                <select class="form-control" ng-model="filterItem1.category" ng-options="item.name for item in filterOptions1.categorys"></select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="product">and</label>
+                            <div class="input-group">
+                                <select class="form-control" ng-model="filterItem2.product" ng-options="item.name for item in filterOptions2.products"></select>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-default close-this" ng-click="clearResults()"><span class="icon icon-cancel color-guide-text" ></span></button>
+                    </form>
+                </div>
+                <div class="search-header-content">
+                <h3>Try one of these answers:</h3>
+                    <ul>
+                        <li ng-repeat="d in data | limitTo:quantity"><a href="#guides-content">{{d.title}}?</a></li>
+                    </ul>
+                    <span class="not-link" ng-click="quantityChange()">... show more</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

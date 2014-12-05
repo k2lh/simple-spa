@@ -1,0 +1,51 @@
+<div ng-include src="'forums/forums-header.html'"></div>
+<div ng-include src="'forums/forums-search-medium.html'"></div>
+
+<div class="content-area">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class=" breadcrumbs">
+                    forums <span class="icon icon-angle-right color-talk-text"></span> tips & tricks
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-9 addgap padbot60">
+                <h3>Tips & Tricks</h3>
+                <div class="secondline">
+                    <a href="" ng-click="predicate = 'vote'; reverse=!reverse">highest ranked</a>  |
+                    <a href="" ng-click="predicate = 'date'; reverse=!reverse">most Recent</a> |
+                    <a href="" ng-click="predicate = 'views'; reverse=!reverse">most read</a> |
+                    <a href="" ng-click="predicate = 'comments'; reverse=!reverse">most commented</a>
+                </div>
+                <div class="list-forums forums-posts" ng-repeat="i in items | limitTo:quantity | orderBy:predicate:reverse">
+                    <div class="row">
+                        <div class="col-md-1 text-center">
+                            <small><span class="icon icon-plus"></span></small>
+                            <h4 class="vote">{{i.vote}}</h4>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="forums-posts"><a href="#forums-content">{{i.title}}</a></p>
+                            <small>
+                                <a href="#forums-product">{{i.tags}}</a>
+                            </small>
+                        </div>
+                        <div class="col-md-3 text-right">
+                                <span class="icon icon-eye"></span> <small class="padright20">{{i.views}}</small></span>
+                                <span class="icon icon-bubble"></span> <small>{{i.comments}}</small></span>
+                            <br />
+                            <small>{{i.author}} | {{i.date}}</small>
+                        </div>
+                    </div>
+                </div>
+                <span class="not-link" ng-click="quantityChange()" ng-show="quantity < 50">... show more</span>
+            </div>
+
+            <div class="col-md-3">
+                <div ng-include src="'forums/forums-categories.html'"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-include src="'forums/forums-footer.html'"></div>
